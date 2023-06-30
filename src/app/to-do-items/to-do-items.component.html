@@ -12,7 +12,7 @@
         <!-- If `todo.active` is false, the CSS class 'strike' will be applied, which typically adds a strikethrough effect to the text. -->
         <h5 [ngClass]="{'strike': !todo.active}">{{ todo.title }}</h5>
     </span>
-    <input type="checkbox" style="margin-left: 8px;" (click)="onCheckboxClick(todo)">
+    <input type="checkbox" style="margin-left: 8px;" id="checkbox#" [checked]="!todo.active" (click)="onCheckboxClick(todo)">
 </div>
 
 <p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
