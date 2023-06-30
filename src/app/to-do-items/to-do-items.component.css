@@ -1,0 +1,9 @@
+.button-space {
+    display: inline-block;
+    width: 10px;
+    /* Adjust the desired space width */
+}
+
+.strike{
+    text-decoration: line-through;
+}

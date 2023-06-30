@@ -1,0 +1,24 @@
+<!-- <h5>{{todo.title}}</h5>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+    <label class="form-check-label" for="flexCheckDefault">
+        Mark Me Done
+    </label>
+</div> -->
+
+<div style="display: flex; align-items: center;">
+    <span style="margin-left: 0px;">
+        <!-- The `[ngClass]` directive is used to conditionally apply CSS classes to the element based on the value of todo.active. -->
+        <!-- If `todo.active` is false, the CSS class 'strike' will be applied, which typically adds a strikethrough effect to the text. -->
+        <h5 [ngClass]="{'strike': !todo.active}">{{ todo.title }}</h5>
+    </span>
+    <input type="checkbox" style="margin-left: 8px;" (click)="onCheckboxClick(todo)">
+</div>
+
+<p [ngClass]="{'strike': !todo.active}">{{todo.desc}}</p>
+
+<div class="button-container">
+    <button class="btn btn-outline-danger" (click)="onClick(todo)">
+        <i class="fas fa-trash-alt"></i> Delete task</button>
+</div>
+<br>
